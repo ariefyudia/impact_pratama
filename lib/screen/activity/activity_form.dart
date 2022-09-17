@@ -92,10 +92,7 @@ class _ActivityFormPageState extends State<ActivityFormPage> {
         child: BlocListener<ActivitiesBloc, ActivitiesState>(
           listener: (context, state) {
             if (state is DataActivitiesById) {
-              setState(() {
-                selectedValueAct = state.activityTpe;
-              });
-
+              selectedValueAct = state.activityTpe;
               selectedValueObj = state.object;
               institutionController.text = state.institution;
               whenDateController.text = state.when;
